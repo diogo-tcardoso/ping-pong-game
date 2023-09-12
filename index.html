@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="Pad.js"></script>
+    <script src="Ball.js"></script>
+    <script src="PadCPU.js"></script>
+    <script src="Scoreboard.js"></script>
+    <title>Ping Pong</title>
+</head>
+
+<body>
+    <canvas id="graphicDesign" width="1000" height="500">
+        <h1>Ping Pong</h1>
+        <h3>Seu browser não suporta o Canvas</h3>
+    </canvas>
+    <br/>
+    <button onclick="ball.start()">Iniciar</button>
+    <script type="text/javascript">
+
+        let player1 = 0;
+        let player2 = 0;
+        let canvas = document.getElementById('graphicDesign');
+        let ctx = canvas.getContext('2d');
+
+        const keyboard = {
+            up: false,
+            down: false,
+            left: false,
+            right: false,
+        }
+
+        const player = new Pad(ctx, keyboard)
+        const ball = new Ball(ctx, player);
+        const cpu = new PadCPU(ctx, ball);
+        const scoreboard = new Scoreboard(ctx);
+
+        window.addEventListener("keydown",(event)=>{
+            if(event.keyCode == 37){
+                keyboard.left = true;
+            }else if(event.keyCode == 39){
+                keyboard.right = true;
+            }
+            if(event.keyCode == 38){
+                keyboard.up = true;
+            }else if(event.keyCode == 40){
+                keyboard.down = true;
+            }
+        })
+
+        window.addEventListener("keyup",(event)=>{
+            if(event.keyCode == 37){
+                keyboard.left = false;
+            }else if(event.keyCode == 39){
+                keyboard.right = false;
+            }
+            if(event.keyCode == 38){
+                keyboard.up = false;
+            }else if(event.keyCode == 40){
+                keyboard.down = false;
+            }
+        })
+
+        function game(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            player.toDraw();
+            ball.toBallDraw();
+            cpu.toPadCPUDraw();
+            scoreboard.toScoreboardDraw();
+            requestAnimationFrame(game)
+        }
+        requestAnimationFrame(game)
+    </script>
+</body>
+
+</html>
