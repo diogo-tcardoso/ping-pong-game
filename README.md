@@ -30,13 +30,6 @@ cd ping-pong-game
 ```
 Abra o arquivo index.html no seu navegador ou utilize uma extensão de servidor local como Live Server no VS Code.
 
-📁 Estrutura do projeto
-ping-pong-game/
-├── index.html       # Estrutura da página
-├── style.css        # Estilização do jogo
-├── script.js        # Lógica do jogo
-└── README.md        # Documentação
-
 💡 Aprendizados
 Este projeto foi desenvolvido como parte de um desafio para praticar:
 Animações com requestAnimationFrame
