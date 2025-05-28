@@ -39,5 +39,3 @@ Lógica básica de inteligência artificial (raquete do PC)
 
 ## 🧑‍💻 Autor
 Feito por Diogo Timóteo Cardoso
-LinkedIn
-GitHub
