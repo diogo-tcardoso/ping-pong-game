@@ -24,11 +24,11 @@ Um simples e divertido jogo de Ping Pong desenvolvido com HTML, CSS e JavaScript
    ```bash
    git clone https://github.com/diogo-tcardoso/ping-pong-game.git
    
-Navegue até o diretório do projeto:
+2. Navegue até o diretório do projeto:
 ```bash
 cd ping-pong-game
 ```
-Abra o arquivo index.html no seu navegador ou utilize uma extensão de servidor local como Live Server no VS Code.
+3. Abra o arquivo index.html no seu navegador ou utilize uma extensão de servidor local como Live Server no VS Code.
 
 ## 💡 Aprendizados
 Este projeto foi desenvolvido como parte de um desafio para praticar:
